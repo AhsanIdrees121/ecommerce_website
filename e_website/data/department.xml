@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="department">
+        <t t-call="website.layout">
+            <style>
+                .main {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                direction: ltr;
+                unicode-bidi: isolate;
+                box-sizing: inherit;
+                min-height: 300px;
+                }
+                .main2 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .main3 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                margin: 0px auto;
+                background: #ffffff;
+                }
+                .p1 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 20px;
+                padding-bottom: 16px;
+                }
+                .p2 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                margin: auto;
+                max-width: 1276px;
+                padding: 0 16px;
+                }
+                .p3 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: flex;
+                align-items: center;
+                }
+                .p4{
+                -webkit-font-smoothing: antialiased;
+                box-sizing: inherit;
+                margin: 0;
+                color: #212121;
+                display: grid;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 32px;
+                margin-bottom: 24px;
+                }
+                .l1 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 32px;
+                box-sizing: inherit;
+                width: 48px;
+                padding-top: 4px;
+                border-bottom: 4px solid #7665a0;
+                }
+                .ref1 {
+                -webkit-font-smoothing: antialiased;
+                line-height: 1.43;
+                box-sizing: inherit;
+                color: #7665a0;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 22px;
+                border-left: 2px solid #212121;
+                margin-left: 10px;
+                padding-left: 10px;
+                margin-bottom: 25px;
+                }
+                .frm1 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                margin: auto;
+                max-width: 1276px;
+                padding: 0 16px;
+                }
+                .frm2{
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .frm3{
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+                0,
+                1fr
+                ) minmax(0, 1fr) minmax(0, 1fr);
+                margin: -8px;
+                }
+                .frm4 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                box-sizing: inherit;
+                line-height: 1;
+                padding: 8px;
+                }
+                .frm5 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                box-sizing: inherit;
+                position: relative;
+                line-height: 1;
+                }
+                .ref2 {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1;
+                box-sizing: inherit;
+                text-decoration: none;
+                }
+                .frm6 {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1;
+                box-sizing: inherit;
+                top: 0;
+                left: 0%;
+                width: 100%;
+                bottom: 0;
+                height: 100%;
+                position: absolute;
+                }
+                .imgdv {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                box-sizing: inherit;
+                line-height: 1;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                min-height: 60px;
+                }
+                .img {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1;
+                width: 100%;
+                box-sizing: inherit;
+                border-radius: 16px;
+                }
+                .tit {
+                -webkit-font-smoothing: antialiased;
+                box-sizing: inherit;
+                color: #212121;
+                text-align: center;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                }
+                .slide {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                background: #ffffff;
+                margin: 0px auto;
+                padding: 8px 0 0 0;
+                max-width: 1232px;
+                min-height: 400px;
+                padding-top: 20px;
+                }
+                .slick-slider {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .slick-list {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .slick-track {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                left: 0%;
+                }
+                .slick-slide {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                outline: none;
+                width: 100%;
+                }
+                .main-frm {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .sub-frm {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                margin: auto;
+                max-width: 1276px;
+                padding: 0 16px;
+                }
+                .grid {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: grid;
+                grid-template-columns: auto auto;
+                margin-top: -8px;
+                margin-left: -20px;
+                margin-right: -20px;
+                margin-bottom: -8px;
+                }
+                .grid1 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                height: 400px;
+                padding: 8px;
+                }
+                .grid2 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular", "Helvetica Neue", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: grid;
+                grid-template-columns: auto auto;
+                margin-top: -8px;
+                margin-left: -20px;
+                margin-right: -20px;
+                margin-bottom: -8px;
+                }
+                .d1 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .dis {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                margin: 0;
+                box-sizing: border-box;
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+                width: 100%;
+                text-align: center;
+                padding: 8px !important;
+                }
+                .ref4 {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                text-align: center;
+                box-sizing: inherit;
+                text-decoration: none;
+                }
+                .imgdv2 {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                text-align: center;
+                box-sizing: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                }
+                .cont {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .cont1 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                }
+                .imgdes {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                text-align: center;
+                box-sizing: inherit;
+                display: block;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                object-fit: cover;
+                height: auto;
+                max-width: 100%;
+                }
+            </style>
+            <t t-call="e_website.replace_header">
+                <t t-set="departments" t-value="all_departments"/>
+            </t>
+            <div class="main" dir="ltr" id="main-part" bis_skin_checked="1" style="">
+                <div bis_skin_checked="1" style="" class="main2">
+                    <div class="main3" bis_skin_checked="1" style="">
+                        <div bis_skin_checked="1" style="    -webkit-font-smoothing: antialiased;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    box-sizing: inherit;">
+                            <div class="" bis_skin_checked="1" style="    -webkit-font-smoothing: antialiased;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    box-sizing: inherit;
+    width: 100%;
+    margin: auto;
+    max-width: 1276px;
+    padding: 0 16px;">
+                                <div class="" bis_skin_checked="1" style="    -webkit-font-smoothing: antialiased;
+    color: #212121;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    box-sizing: inherit;">
+                                    <div class="" bis_skin_checked="1" style="    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: 1.43;
+    box-sizing: inherit;
+    color: #101527;
+    margin: 24px 0 8px 8px;
+    font-size: 48px;">
+                                        <t t-esc="department.name"/>
+                                    </div>
+                                    <div class="" bis_skin_checked="1" style="-webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: 1.43;
+    box-sizing: inherit;
+    color: #929391;
+    margin: 0px 0px 16px 8px;
+    font-size: 16px;">
+                                        Inspired choices for all your Livingroom needs. For any
+                                        occasion, for every occasion.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bis_skin_checked="1">
+                        <t t-call="e_website.slider"/>
+                    </div>
+
+                    <div bis_skin_checked="1" class="d1">
+                        <div class="p1" id="block-homecentrein-DepartmentPage-livingroom-v2-Section3ASlot"
+                             bis_skin_checked="1">
+                            <div class="p2" bis_skin_checked="1">
+                                <div class="p3" bis_skin_checked="1" style="">
+                                    <h2 class="p4" style="">
+                                        Shop by Categories
+                                        <span class="l1" style=""></span>
+                                    </h2>
+                                    <a href="/in/en" class="ref1" style=""></a>
+                                </div>
+                            </div>
+                            <div class="frm1" bis_skin_checked="1" style="">
+                                <div class="frm2" bis_skin_checked="1" style="">
+                                    <div class="frm3" bis_skin_checked="1" style="">
+                                        <t t-foreach="categ_ids" t-as="category">
+                                            <div class="frm4" bis_skin_checked="1" style="">
+                                                <div class="frm5" bis_skin_checked="1" style=" ">
+                                                    <a t-attf-href="/shop/category/{{ category.id }}"
+                                                       class="ref2" style="">
+                                                        <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                    </a>
+                                                    <div class="imgdv" bis_skin_checked="1" style="">
+                                                        <img width="100%" t-if="category.image_1920"
+                                                             t-att-src="'data:image/jpeg;base64,' + category.image_1920.decode('utf-8')"
+                                                             t-att-alt="category.name" class="img"/>
+                                                    </div>
+                                                    <div class="tit" id="category_title_0" bis_skin_checked="1">
+                                                        <t t-esc="category.name"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div bis_skin_checked="1" class="d1">
+
+                        <div class="p1" id="block-homecentrein-DepartmentPage-livingroom-v2-Section3ASlot"
+                             bis_skin_checked="1">
+                            <div class="p2" bis_skin_checked="1">
+                                <div class="p3" bis_skin_checked="1" style="">
+                                    <h2 class="p4" style="">
+                                        Collections in Trend
+                                        <span class="l1" style=""></span>
+                                    </h2>
+                                    <a href="/in/en" class="ref1" style=""></a>
+                                </div>
+                            </div>
+                            <div class="frm1" bis_skin_checked="1" style="">
+                                <div class="frm2" bis_skin_checked="1" style="">
+                                    <div class="frm3" bis_skin_checked="1" style="">
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <div class="frm5" bis_skin_checked="1">
+                                                <a href="/in/en/c/livingroom-recliners" class="ref2">
+                                                    <div class="imgdv" bis_skin_checked="1"></div>
+                                                </a>
+                                                <div class="jsx-3840914694 jss127" bis_skin_checked="1">
+                                                    <img width="100%"
+                                                         src="https://interwood.pk/media/catalog/product/r/e/recliner.jpg"
+                                                         alt="Recliners" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_1" bis_skin_checked="1">
+                                                    Recliners
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <div class="frm5" bis_skin_checked="1">
+                                                <a href="/in/en/c/livingroom-recliners" class="ref2">
+                                                    <div class="imgdv" bis_skin_checked="1"></div>
+                                                </a>
+                                                <div class="jsx-3840914694 jss127" bis_skin_checked="1">
+                                                    <img width="100%"
+                                                         src="https://interwood.pk/media/catalog/product/r/e/recliner.jpg"
+                                                         alt="Recliners" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_1" bis_skin_checked="1">
+                                                    Recliners
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bis_skin_checked="1" class="d1">
+
+                    </div>
+                    <div bis_skin_checked="1" class="d1">
+
+                        <div class="p1" id="block-homecentrein-DepartmentPage-livingroom-v2-Section3ASlot"
+                             bis_skin_checked="1">
+                            <div class="p2" bis_skin_checked="1">
+                                <div class="p3" bis_skin_checked="1" style="">
+                                    <h2 class="p4" style="">
+                                        Just Arrived Collections
+                                        <span class="l1" style=""></span>
+                                    </h2>
+                                    <a href="/in/en" class="ref1" style=""></a>
+                                </div>
+                            </div>
+                            <div class=" main-frm" bis_skin_checked="1">
+                                <div class="sub-frm" bis_skin_checked="1">
+                                    <div class="grid" bis_skin_checked="1">
+                                        <div class="grid1" bis_skin_checked="1">
+                                            <span class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+                                                  style="height: 100%"></span>
+                                        </div>
+                                        <div class="grid1" bis_skin_checked="1">
+                                            <span class="MuiSkeleton-root MuiSkeleton-rect MuiSkeleton-pulse"
+                                                  style="height: 100%"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div bis_skin_checked="1" class="d1">
+
+                        <div class="p1" id="block-homecentrein-DepartmentPage-livingroom-v2-Section3ASlot"
+                             bis_skin_checked="1">
+                            <div class="p2" bis_skin_checked="1">
+                                <div class="p3" bis_skin_checked="1" style="">
+                                    <h2 class="p4" style="">
+                                        Shop by Discount
+                                        <span class="l1" style=""></span>
+                                    </h2>
+                                    <a href="/in/en" class="ref1" style=""></a>
+                                </div>
+                            </div>
+                            <div class="frm1" bis_skin_checked="1" style="">
+                                <div class="frm2" bis_skin_checked="1" style="">
+                                    <div class="frm3" bis_skin_checked="1" style="">
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <div class="frm5" bis_skin_checked="1">
+                                                <a href="/in/en/c/livingroom-recliners" class="ref2">
+                                                    <div class="imgdv" bis_skin_checked="1"></div>
+                                                </a>
+                                                <div class="jsx-3840914694 jss127" bis_skin_checked="1">
+                                                    <img width="100%"
+                                                         src="https://interwood.pk/media/catalog/product/r/e/recliner.jpg"
+                                                         alt="Recliners" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_1" bis_skin_checked="1">
+                                                    Recliners
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <div class="frm5" bis_skin_checked="1">
+                                                <a href="/in/en/c/livingroom-recliners" class="ref2">
+                                                    <div class="imgdv" bis_skin_checked="1"></div>
+                                                </a>
+                                                <div class="jsx-3840914694 jss127" bis_skin_checked="1">
+                                                    <img width="100%"
+                                                         src="https://interwood.pk/media/catalog/product/r/e/recliner.jpg"
+                                                         alt="Recliners" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_1" bis_skin_checked="1">
+                                                    Recliners
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div bis_skin_checked="1" class="d1">
+
+                        <div class="p1" id="block-homecentrein-DepartmentPage-livingroom-v2-Section3ASlot"
+                             bis_skin_checked="1">
+                            <div class="p2" bis_skin_checked="1">
+                                <div class="p3" bis_skin_checked="1" style="">
+                                    <h2 class="p4" style="">
+                                        Hidden Gems
+                                        <span class="l1" style=""></span>
+                                    </h2>
+                                    <a href="/in/en" class="ref1" style=""></a>
+                                </div>
+                            </div>
+                            <div class="frm1" bis_skin_checked="1" style="">
+                                <div class="frm2" bis_skin_checked="1" style="">
+                                    <div class="frm3" bis_skin_checked="1" style="">
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1" style="">
+                                            <div class="frm5" bis_skin_checked="1" style=" ">
+                                                <a href="/in/en/c/livingroom-sofas" class="ref2" style="">
+                                                    <div class="frm6" bis_skin_checked="1" style=""></div>
+                                                </a>
+                                                <div class="imgdv" bis_skin_checked="1" style="">
+                                                    <img width="100%"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=288,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Living_Desktop_cat_1-27Jan2023.jpg"
+                                                         alt="Sofas" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_0" bis_skin_checked="1">Sofas</div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <div class="frm5" bis_skin_checked="1">
+                                                <a href="/in/en/c/livingroom-recliners" class="ref2">
+                                                    <div class="imgdv" bis_skin_checked="1"></div>
+                                                </a>
+                                                <div class="jsx-3840914694 jss127" bis_skin_checked="1">
+                                                    <img width="100%"
+                                                         src="https://interwood.pk/media/catalog/product/r/e/recliner.jpg"
+                                                         alt="Recliners" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_1" bis_skin_checked="1">
+                                                    Recliners
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <div class="frm5" bis_skin_checked="1">
+                                                <a href="/in/en/c/livingroom-recliners" class="ref2">
+                                                    <div class="imgdv" bis_skin_checked="1"></div>
+                                                </a>
+                                                <div class="jsx-3840914694 jss127" bis_skin_checked="1">
+                                                    <img width="100%"
+                                                         src="https://interwood.pk/media/catalog/product/r/e/recliner.jpg"
+                                                         alt="Recliners" class="img"/>
+                                                </div>
+                                                <div class="tit" id="category_title_1" bis_skin_checked="1">
+                                                    Recliners
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div bis_skin_checked="1" class="d1">
+
+                        <div class="p1" id="block-homecentrein-DepartmentPage-livingroom-v2-Section3ASlot"
+                             bis_skin_checked="1">
+                            <div class="p2" bis_skin_checked="1">
+                                <div class="p3" bis_skin_checked="1" style="">
+                                    <h2 class="p4" style="">
+                                        Shop by Discount
+                                        <span class="l1" style=""></span>
+                                    </h2>
+                                    <a href="/in/en" class="ref1" style=""></a>
+                                </div>
+                            </div>
+                            <div class="frm1" bis_skin_checked="1" style="">
+                                <div class="frm2" bis_skin_checked="1" style="">
+                                    <div class="frm3" bis_skin_checked="1" style="">
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <a href="/in/en/search?discount=5,30&amp;q=index%3Adiscount%3AallCategories%3Alivingroom&amp;p=2"
+                                               target="_self" class="ref4">
+                                                <div class="imgdv2" bis_skin_checked="1">
+                                                    <img class="imgdes"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=408,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Desktop-5-1-Living-816x400-Block2-23Mar2023.jpg"/>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <a href="/in/en/search?discount=5,40&amp;q=allCategories%3Alivingroom%3Aindex%3Adiscount&amp;p=2"
+                                               target="_self" class="ref4">
+                                                <div class="imgdv2" bis_skin_checked="1">
+                                                    <img class="imgdes"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=408,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Desktop-5-2-Living-816x400-Block2-23Mar2023.jpg"/>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <a href="/in/en/search?discount=5,50&amp;q=allCategories%3Alivingroom%3Aindex%3Adiscount&amp;p=2"
+                                               target="_self" class="ref4">
+                                                <div class="imgdv2" bis_skin_checked="1">
+                                                    <img class="imgdes"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=408,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Desktop-5-3-Living-816x400-Block2-23Mar2023.jpg"/>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="frm4" bis_skin_checked="1">
+                                            <a href="/in/en/search?discount=5,60&amp;q=allCategories%3Alivingroom%3Aindex%3Adiscount&amp;p=2"
+                                               target="_self" class="ref4">
+                                                <div class="imgdv2" bis_skin_checked="1">
+                                                    <img class="imgdes"
+                                                         src="https://lmsin.net/cdn-cgi/image/w=408,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/Desktop-5-4-Living-816x400-Block2-23Mar2023.jpg"/>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--    script-->
+
+
+        </t>
+
+    </template>
+    <template id="custom_website_sale_breadcrumb" inherit_id="website_sale.product">
+        <xpath expr="//div[@class='col-lg-6 d-flex align-items-center']" position="replace">
+            <div class="bread" bis_skin_checked="1">
+                <nav class="breadcrumb"
+                     aria-label="breadcrumb">
+                    <ol class="MuiBreadcrumbs-ol">
+                        <li class="MuiBreadcrumbs-li">
+                            <a class="row"
+                               href="/">Home
+                            </a>
+                        </li>
+                        <t t-foreach="parents" t-as="parent">
+                            <li aria-hidden="true" class="MuiBreadcrumbs-separator">
+                                <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg"
+                                     width="8px"/>
+                            </li>
+                            <li class="MuiBreadcrumbs-li">
+                                <a class="row"
+                                   t-attf-href="/category/{{ parent.id }}">
+                                    <t t-esc="parent.name"/>
+                                </a>
+                            </li>
+                        </t>
+                    </ol>
+                </nav>
+            </div>
+<!--            <div class="col-lg-6 d-flex align-items-center">-->
+<!--                <ol class="breadcrumb p-0 mb-2 m-lg-0">-->
+<!--                    <li class="breadcrumb-item o_not_editable">-->
+<!--                        <a t-att-href="keep(category=0)">All Products</a>-->
+<!--                    </li>-->
+<!--                    <li t-if="category" class="breadcrumb-item">-->
+<!--                        <a t-att-href="keep('/custom-path-for-category/' + slug(category), category=0)"-->
+<!--                           t-field="category.name"/>-->
+<!--                    </li>-->
+<!--                    <li class="breadcrumb-item active">-->
+<!--                        <a t-att-href="keep('/custom-path-for-product/' + product.id)" t-field="product.name"/>-->
+<!--                    </li>-->
+<!--                </ol>-->
+<!--            </div>-->
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="category">
+        <t t-call="website.layout">
+            <style>
+                .main {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.43;
+                direction: ltr;
+                unicode-bidi: isolate;
+                box-sizing: inherit;
+                min-height: 300px;
+                }
+                .page {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                margin: auto;
+                max-width: 1276px;
+                padding: 0 16px;
+                }
+                .bread {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-top: 28px;
+                }
+                .breadcrumb {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                box-sizing: inherit;
+                margin: 0;
+                font-size: 16px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.5;
+                }
+                .MuiBreadcrumbs-ol {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 16px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.5;
+                box-sizing: inherit;
+                margin: 0;
+                display: flex;
+                padding: 0;
+                flex-wrap: wrap;
+                list-style: none;
+                align-items: center;
+                }
+                .MuiBreadcrumbs-ol {
+                -webkit-font-smoothing: antialiased;
+                font-size: 16px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.5;
+                color: #929391;
+                list-style: none;
+                box-sizing: inherit;
+                }
+                .row {
+                -webkit-font-smoothing: antialiased;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                list-style: none;
+                box-sizing: inherit;
+                margin: 0;
+                text-decoration: none;
+                color: #929391;
+                font-size: 12px;
+                line-height: 25px;
+                }
+                .MuiBreadcrumbs-separator {
+                -webkit-font-smoothing: antialiased;
+                font-size: 16px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.5;
+                color: #929391;
+                list-style: none;
+                box-sizing: inherit;
+                display: flex;
+                margin-left: 8px;
+                user-select: none;
+                margin-right: 8px;
+                }
+                .name-div {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-top: 12px;
+                }
+                .name-div2 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: flex;
+                align-items: start;
+                }
+                .name {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                box-sizing: inherit;
+                margin: 0;
+                font-weight: normal;
+                line-height: 1.2;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-size: 36px;
+                }
+                .jss105 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-top: 4px;
+                }
+                .jss817 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                }
+                .jss1484 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-top: 24px;
+                }
+                .jss1485 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                margin: -8px;
+                display: flex;
+                flex-wrap: wrap;
+                }
+                .jss1486 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                margin: 8px;
+                }
+                .jss1481 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                position: relative;
+                align-items: center;
+                user-select: none;
+                vertical-align: middle;
+                justify-content: center;
+                text-decoration: none;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                min-width: 64px;
+                box-shadow: none !important;
+                box-sizing: border-box;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4,
+                0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                line-height: 1.75;
+                background-color: #FFF;
+                color: #212121;
+                width: auto;
+                border: 1px solid #ecedeb;
+                padding: 7px 20px 7px 8px;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                border-radius: 2px;
+                text-transform: none;
+                }
+                .MuiButton-label {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                line-height: 1.75;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: none;
+                box-sizing: inherit;
+                width: 100%;
+                display: inherit;
+                align-items: inherit;
+                justify-content: inherit;
+                }
+                .jss1487 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: none;
+                box-sizing: inherit;
+                line-height: 0;
+                padding-right: 12px;
+                }
+                .jss1482 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: none;
+                line-height: 0;
+                box-sizing: inherit;
+                width: 40px;
+                border-radius: 2px;
+                }
+                .jss1488 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                line-height: 1.75;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: none;
+                box-sizing: inherit;
+                white-space: nowrap;
+                }
+                .jss832 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                margin-top: 24px;
+                background-color: rgb(247, 248, 247);
+                }
+                .jss707 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 100%;
+                margin: auto;
+                max-width: 1276px;
+                padding: 0 16px;
+                }
+                .jss834 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                }
+                .jss1510 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                margin: -8px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                }
+                .jss1511 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                margin: 8px;
+                position: relative;
+                }
+                .jss1507 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                position: relative;
+                align-items: center;
+                user-select: none;
+                vertical-align: middle;
+                text-decoration: none;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                padding: 6px 16px;
+                min-width: 64px;
+                box-shadow: none !important;
+                box-sizing: border-box;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4,
+                0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                line-height: 1.75;
+                border-radius: 2px;
+                background-color: #FFF;
+                color: #5d5e5c;
+                width: 192px;
+                border: 1px solid #ecedeb;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: capitalize;
+                justify-content: space-between;
+                }
+                .jss1512 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                line-height: 1.75;
+                color: #5d5e5c;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: capitalize;
+                box-sizing: inherit;
+                padding-right: 4px;
+                }
+                .jss1508 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                top: 40px;
+                left: 0;
+                width: 305px;
+                z-index: 999;
+                position: absolute;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+                border-radius: 2px;
+                background-color: #FFFFFF;
+                }
+                .jss111 .MuiCollapse-hidden {
+                min-height: auto !important;
+                visibility: visible !important;
+                }
+                .jss111 .MuiCollapse-root {
+                height: auto !important;
+                }
+                .MuiCollapse-root {
+                height: 0;
+                overflow: hidden;
+                transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                }
+                .MuiCollapse-hidden {
+                visibility: hidden;
+                }
+                .MuiCollapse-wrapper {
+                display: flex;
+                }
+                .MuiCollapse-wrapperInner {
+                width: 100%;
+                }
+                .MuiList-padding {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                }
+                .MuiList-root {
+                margin: 0;
+                padding: 0;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                position: relative;
+                list-style: none;
+                }
+                *, ::before, ::after {
+                box-sizing: inherit;
+                }
+                .MuiListItem-button:hover {
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.04);
+                }
+                .MuiListItem-button {
+                transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                }
+                .MuiListItem-gutters {
+                padding-left: 16px;
+                padding-right: 16px;
+                }
+                .MuiListItem-root {
+                width: 100%;
+                display: flex;
+                position: relative;
+                box-sizing: border-box;
+                text-align: left;
+                align-items: center;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                justify-content: flex-start;
+                text-decoration: none;
+                }
+                .MuiButtonBase-root {
+                color: inherit;
+                border: 0;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                align-items: center;
+                border-radius: 0;
+                vertical-align: middle;
+                -moz-appearance: none;
+                justify-content: center;
+                text-decoration: none;
+                -moz-user-select: none;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                }
+                .MuiListItem-button:hover {
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.04);
+                }
+                .MuiListItem-button {
+                transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                }
+                .MuiListItem-gutters {
+                padding-left: 16px;
+                padding-right: 16px;
+                }
+                .MuiListItem-root {
+                width: 100%;
+                display: flex;
+                position: relative;
+                box-sizing: border-box;
+                text-align: left;
+                align-items: center;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                justify-content: flex-start;
+                text-decoration: none;
+                }
+                .MuiButtonBase-root {
+                color: inherit;
+                border: 0;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                align-items: center;
+                border-radius: 0;
+                vertical-align: middle;
+                -moz-appearance: none;
+                justify-content: center;
+                text-decoration: none;
+                -moz-user-select: none;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                }
+                .jss1513 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                margin: 8px;
+                position: relative;
+                }
+                .jss1514 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                line-height: 1.75;
+                color: #5d5e5c;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: capitalize;
+                box-sizing: inherit;
+                padding-right: 4px;
+                }
+                .jss151 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                top: 40px;
+                left: 0;
+                width: 305px;
+                z-index: 999;
+                position: absolute;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+                border-radius: 2px;
+                background-color: #FFFFFF;
+                }
+                .jss871 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                visibility: hidden;
+                box-sizing: inherit;
+                padding: 16px 16px 10px;
+                }
+                .jss167 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: flex;
+                align-items: center;
+                padding-top: 16px;
+                justify-content: space-between;
+                }
+                .jss168 {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                line-height: 1.43;
+                box-sizing: inherit;
+                color: rgb(146, 147, 145);
+                font-weight: 600;
+                }
+                .jss169 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                display: inline-flex;
+                align-items: center;
+                }
+                .jss170 {
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                line-height: 1.43;
+                box-sizing: inherit;
+                color: rgb(146, 147, 145);
+                font-weight: 600;
+                padding-right: 16px;
+                }
+                .jss171 {
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                width: 192px;
+                position: relative;
+                }
+                .jss172 {
+                -webkit-font-smoothing: antialiased;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                line-height: 1.75;
+                color: #5d5e5c;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: capitalize;
+                box-sizing: inherit;
+                padding-right: 4px;
+                }
+                .MuiButtonBase-root {
+                color: inherit;
+                border: 0;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                align-items: center;
+                user-select: none;
+                border-radius: 0;
+                vertical-align: middle;
+                -moz-appearance: none;
+                justify-content: center;
+                text-decoration: none;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                }
+                .MuiButton-root {
+                color: #212121;
+                width: 100%;
+                padding: 6px 16px;
+                font-size: 16px;
+                min-width: 64px;
+                box-shadow: none !important;
+                box-sizing: border-box;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4,
+                0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: nornal;
+                line-height: 1.75;
+                border-radius: 2px;
+                text-transform: uppercase;
+                }
+                color: #7665A0;
+                background-color: #FFF;
+                }
+                .MuiButton-contained {
+                color: rgba(0, 0, 0, 0.87);
+                box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px
+                rgba(0,0,0,0.12);
+                background-color: #e0e0e0;
+                }
+                .jss163 {
+                color: #5d5e5c;
+                border: 1px solid #ecedeb;
+                font-size: 14px;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: normal;
+                text-transform: capitalize;
+                justify-content: space-between;
+                }
+                .jss174{
+                -webkit-font-smoothing: antialiased;
+                color: #212121;
+                font-size: 14px;
+                font-family: "SofiaPro-Regular","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: 400;
+                line-height: 1.43;
+                box-sizing: inherit;
+                padding-top: 16px;}
+                .MuiGrid-container {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                }
+                .MuiGrid-spacing-xs-2 {
+                width: calc(100% + 16px);
+                margin: -8px;
+                }
+                .jss175 {
+                line-height: 0 !important;
+                }
+                .MuiGrid-spacing-xs-2 > .MuiGrid-item {
+                padding: 8px;
+                }
+                .MuiGrid-item {
+                margin: 0;
+                box-sizing: border-box;
+                }
+                .MuiGrid-grid-xs-6 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+                }
+                .jss186 {
+                position: relative;
+                line-height: 0;
+                }
+                .jss178 {
+                outline: none;
+                }
+                .MuiButtonBase-root {
+                color: inherit;
+                border: 0;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                align-items: center;
+                user-select: none;
+                border-radius: 0;
+                vertical-align: middle;
+                -moz-appearance: none;
+                justify-content: center;
+                text-decoration: none;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                }
+                .MuiIconButton-root {
+                flex: 0 0 auto;
+                color: rgba(0, 0, 0, 0.54);
+                padding: 12px;
+                overflow: visible;
+                font-size: 1.5rem;
+                text-align: center;
+                transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                border-radius: 50%;
+                }
+                .MuiIconButton-root:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+                }
+                .jss188:hover {
+                background-color: rgba(255, 255, 255);
+                }
+                .MuiIconButton-label {
+                width: 100%;
+                display: flex;
+                align-items: inherit;
+                justify-content: inherit;
+                }
+                .jss196 {
+                width: 22px;
+                height: 21px;
+                background:
+                url(https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/prod/Sprite_icons.svg)
+                -549px -246px;
+                }
+                .jss210 {
+                color: black;
+                background-color: white;
+                }
+                .jss202 {
+                opacity: 0.95;
+                padding: 3px 5px;
+                position: absolute;
+                font-size: 12px;
+                text-align: center;
+                font-family: "SofiaPro-Bold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                line-height: 15px;
+                border-radius: unset;
+                letter-spacing: unset;
+                text-transform: uppercase;
+                }
+                .jss206 {
+                left: 8px;
+                bottom: 8px;
+                border-radius: 2px;
+                }
+                .jss211 {
+                color: #242428;
+                }
+                .jss220 {
+                font-family: SofiaPro-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI
+                Emoji";
+                }
+                .jss213 {
+                font-size: 12px;
+                }
+                .jss221 {
+                font-family: SofiaPro-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI
+                Emoji";
+                }
+                .jss222 {
+                color: rgb(146, 147, 145);
+                display: inline-flex;
+                align-items: baseline;
+                line-height: 22px;
+                }
+                .jss212 {
+                text-decoration: line-through;
+                }
+                .jss223 {
+                font-size: 12px;
+                font-family: SofiaPro-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI
+                Emoji";
+                }
+                .jss224 {
+                font-size: 12px;
+                font-family: SofiaPro-Semibold, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI
+                Emoji";
+                }
+                .jss184:hover {
+                text-decoration: none;
+                }
+                .jss184 {
+                color: #212121;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-decoration: none;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                }
+                .jss1133 {
+                display: flex;
+                align-items: center;
+                padding-top: 16px;
+                justify-content: space-between;
+                }
+                .jss1134 {
+                color: rgb(146, 147, 145);
+                font-weight: 600;
+                }
+                .jss1135 {
+                display: inline-flex;
+                align-items: center;
+                }
+                .jss1136 {
+                color: rgb(146, 147, 145);
+                font-weight: 600;
+                padding-right: 16px;
+                }
+                .jss1137 {
+                width: 192px;
+                position: relative;
+                }
+                .MuiButtonBase-root {
+                color: inherit;
+                border: 0;
+                cursor: pointer;
+                margin: 0;
+                display: inline-flex;
+                outline: 0;
+                padding: 0;
+                position: relative;
+                align-items: center;
+                border-radius: 0;
+                vertical-align: middle;
+                -moz-appearance: none;
+                justify-content: center;
+                text-decoration: none;
+                -moz-user-select: none;
+                background-color: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+                }
+                .MuiButton-root:hover {
+                text-decoration: none;
+                background-color: rgba(33, 33, 33, 0.04);
+                }
+                .MuiButton-root {
+                color: #212121;
+                width: 100%;
+                padding: 6px 16px;
+                font-size: 16px;
+                min-width: 64px;
+                box-shadow: none !important;
+                box-sizing: border-box;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4,
+                0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                font-family: "SofiaPro-Semibold","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+                font-weight: nornal;
+                line-height: 1.75;
+                border-radius: 2px;
+                text-transform: uppercase;
+                }
+                .MuiButton-containedSecondary:hover {
+                background-color: #FFF;
+                }
+                .MuiButton-contained:hover {
+                box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px
+                rgba(0,0,0,0.12);
+                background-color: #d5d5d5;
+                }
+                .MuiButton-containedSecondary {
+                color: #7665A0;
+                background-color: #FFF;
+                }
+                .MuiButton-contained {
+                color: rgba(0, 0, 0, 0.87);
+                box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px
+                rgba(0,0,0,0.12);
+                background-color: #e0e0e0;
+                }
+                .jss1130 {
+                top: 40px;
+                right: 0;
+                width: 100%;
+                z-index: 999;
+                position: absolute;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+                border-radius: 2px;
+                background-color: #FFFFFF;
+                }
+                @media (min-width: 600px)
+                .jss225 {
+                font-size: 14px;
+                padding-left: 0px;
+                padding-right: 0px;
+                }
+                @media (min-width: 0px)
+                .jss225 {
+                font-size: 12px;
+                padding-left: 8px;
+                padding-right: 8px;
+                }
+                .jss225 {
+                min-height: auto;
+                line-height: 1.43;
+                padding-top: 5px;
+                }
+                @media (min-width: 600px)
+
+                .jss214 {
+                font-size: 18px;
+                }
+                @media (min-width: 600px)
+                .jss218 {
+                padding-left: 0px;
+                padding-right: 0px;
+                }
+                @media (min-width: 0px)
+                .jss218 {
+                padding-left: 8px;
+                padding-right: 8px;
+                }
+                .jss218 {
+                display: flex;
+                line-height: 22px;
+                padding-top: 12px;
+                }
+                @media (min-width: 600px)
+                .jss179 {
+                min-height: 194px;
+                }
+                @media (min-width: 600px)
+                .jss191:hover {
+                transform: scale(1.2);
+                }
+                @media (min-width: 600px)
+                .jss191 {
+                padding: 7px;
+                }
+                .jss191 {
+                display: block !important;
+                }
+                @media (min-width: 600px)
+                .jss188 {
+                top: 16px;
+                left: unset;
+                right: 16px;
+                width: 38px;
+                height: 38px;
+                }
+                .jss188 {
+                padding: 1px;
+                z-index: 1;
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255);
+                }
+                @media (max-width: 599.95px) {
+                .jss707 {
+                padding: 0 12px;
+                }
+                }
+                @media (min-width: 600px) {
+                .jss707 {
+                padding: 0 16px;
+                }
+                }
+                @media (min-width: 600px)
+                .MuiGrid-grid-sm-3 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+                }
+                @media (min-width: 600px)
+                .jss177 {
+                padding-bottom: 32px;
+                }
+                @media (min-width: 0px)
+                .jss177 {
+                padding-bottom: 24px;
+                }
+                .jss177 {
+                height: 100%;
+                position: relative;
+                }
+            </style>
+            <t t-call="e_website.replace_header">
+                <t t-set="departments" t-value="all_departments"/>
+            </t>
+            <div class="main" dir="ltr" id="main-part" bis_skin_checked="1" style="">
+                <div bis_skin_checked="1">
+                    <div class="page" bis_skin_checked="1">
+                        <div bis_skin_checked="1">
+                            <div class="bread" bis_skin_checked="1">
+                                <nav class="breadcrumb"
+                                     aria-label="breadcrumb">
+                                    <ol class="MuiBreadcrumbs-ol">
+                                        <li class="MuiBreadcrumbs-li">
+                                            <a class="row"
+                                               href="/">Home
+                                            </a>
+                                        </li>
+                                        <t t-foreach="parents" t-as="parent">
+                                            <li aria-hidden="true" class="MuiBreadcrumbs-separator">
+                                                <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/right-pointer.svg"
+                                                     width="8px"/>
+                                            </li>
+                                            <li class="MuiBreadcrumbs-li">
+                                                <t t-if="parent.name">
+                                                    <a class="row"
+                                                       t-attf-href="/category/{{ parent.id }}">
+                                                        <t t-esc="parent.name"/>
+                                                    </a>
+                                                </t>
+                                                <t t-else="">
+                                                    <a class="row"
+                                                       t-attf-href="/shop/category/{{ parent.id }}">
+                                                        <t t-esc="parent.name"/>
+                                                    </a>
+                                                </t>
+
+                                            </li>
+                                        </t>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="name-div" bis_skin_checked="1">
+                                <div class="name-div2" bis_skin_checked="1">
+                                    <div bis_skin_checked="1">
+                                        <div bis_skin_checked="1">
+                                            <h1 class="name">
+                                                <t t-esc="category.name"/>
+                                            </h1>
+                                        </div>
+                                        <div class="" bis_skin_checked="1">
+                                            <p class=""></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jss817" id="above-html-markup"
+                                     bis_skin_checked="1"> <!-- --> </div>
+                            </div>
+                            <div class="jss1484" bis_skin_checked="1">
+                                <div class="jss1485" bis_skin_checked="1">
+                                    <t t-foreach="sub_categories" t-as="sub_category" t-if="sub_category">
+                                        <div class="jss1486" bis_skin_checked="1">
+                                            <a class="jss1481" tabindex="0" aria-disabled="false"
+                                               t-attf-href="/category/{{ sub_category.id }}">
+                                                <span class="MuiButton-label">
+                                                    <div class="jss1487" bis_skin_checked="1">
+                                                        <img t-if="sub_category.image_1920"
+                                                             t-att-src="'data:image/jpeg;base64,' + sub_category.image_1920.decode('utf-8')"
+                                                             alt="img" class="jss1482"/>
+                                                    </div>
+                                                    <div class="jss1488" bis_skin_checked="1">
+                                                        <t t-esc="sub_category.name"/>
+                                                    </div>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        /* Initially hide the dropdown content */
+                        .dropdown-content {
+                        display: none;
+                        }
+
+                        /* Show dropdown content when the parent div is hovered */
+                        .jss1511:hover .dropdown-content {
+                        display: block;
+                        }
+
+                        /* Style the dropdown content */
+                        .dropdown-content {
+                        position: absolute;
+                        background-color: white;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                        }
+
+                    </style>
+                    <div class="jss832" bis_skin_checked="1">
+                        <div class="jss707" bis_skin_checked="1">
+                            <div class="jss834" bis_skin_checked="1">
+                                <div bis_skin_checked="1">
+                                    <div class="jss1510" bis_skin_checked="1">
+                                        <div class="jss1511" bis_skin_checked="1">
+                                            <button class="jss1507"
+                                                    tabindex="0" type="button" id="price-range-selector">
+                                                <span class="MuiButton-label">
+                                                    <div class="jss1512" bis_skin_checked="1">Price</div>
+                                                    <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg"
+                                                         alt=""/>
+                                                </span>
+                                            </button>
+                                            <div class="dropdown-content">
+                                                <div id="o_wsale_price_range">
+                                                    <input type="range" multiple="multiple"
+                                                           t-attf-class="form-range range-with-input {{_classes_input}}"
+                                                           t-att-data-currency="pricelist.currency_id.symbol"
+                                                           t-att-data-currency-position="pricelist.currency_id.position"
+                                                           t-att-step="pricelist.currency_id.rounding"
+                                                           t-att-min="'%f' % (available_min_price)"
+                                                           t-att-max="'%f' % (available_max_price)"
+                                                           t-att-value="'%f,%f' % (min_price, max_price)"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jss151" bis_skin_checked="1">
+                                            <div class="MuiCollapse-root MuiCollapse-hidden"
+                                                 style="min-height: 0px;" bis_skin_checked="1">
+                                                <div class="MuiCollapse-wrapper" bis_skin_checked="1">
+                                                    <div class="MuiCollapse-wrapperInner" bis_skin_checked="1">
+                                                        <div class="MuiBox-root jss871" bis_skin_checked="1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jss1513" bis_skin_checked="1">
+                                            <button class="jss1507"
+                                                    tabindex="0" type="button">
+                                                <span class="MuiButton-label">
+                                                    <div class="jss1514" bis_skin_checked="1">Discount
+                                                        Range
+                                                    </div>
+                                                    <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-black.svg"
+                                                         alt=""/>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div bis_skin_checked="1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="jss7" bis_skin_checked="1">
+                        <div class="MuiBox-root jss1133" bis_skin_checked="1">
+                            <div class="MuiBox-root jss1134" bis_skin_checked="1">
+                                <t t-esc="len(products)"/>
+                                Products
+                            </div>
+                            <div class="MuiBox-root jss1135" bis_skin_checked="1">
+                                <div class="MuiBox-root jss1136" bis_skin_checked="1">Sort by</div>
+                                <div class="MuiBox-root jss1137" bis_skin_checked="1">
+                                    <button class="MuiButtonBase-root MuiButton-root MuiButton-contained jss1129 MuiButton-containedSecondary"
+                                            tabindex="0" type="button">
+                                        <span class="MuiButton-label">
+                                            <div class="MuiBox-root jss1138" bis_skin_checked="1">Relevance</div>
+                                            <img class=""
+                                                 src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/down-arrow-gray.svg"
+                                                 alt=""/>
+                                        </span>
+                                    </button>
+                                    <div class="jss1130" bis_skin_checked="1">
+                                        <div class="MuiCollapse-root MuiCollapse-hidden" style="min-height: 0px;"
+                                             bis_skin_checked="1">
+                                            <div class="MuiCollapse-wrapper" bis_skin_checked="1">
+                                                <div class="MuiCollapse-wrapperInner" bis_skin_checked="1">
+                                                    <div bis_skin_checked="1">
+                                                        <ul class="MuiList-root MuiList-padding">
+                                                            <div class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                                                 tabindex="0" role="button" aria-disabled="false"
+                                                                 bis_skin_checked="1">New Arrivals
+                                                            </div>
+                                                            <div class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                                                 tabindex="0" role="button" aria-disabled="false"
+                                                                 bis_skin_checked="1">Discount
+                                                            </div>
+                                                            <div class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                                                 tabindex="0" role="button" aria-disabled="false"
+                                                                 bis_skin_checked="1">Price - Low to High
+                                                            </div>
+                                                            <div class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                                                 tabindex="0" role="button" aria-disabled="false"
+                                                                 bis_skin_checked="1">Price - High to Low
+                                                            </div>
+                                                            <div class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button Mui-selected jss1132"
+                                                                 tabindex="0" role="button" aria-disabled="false"
+                                                                 bis_skin_checked="1">Relevance
+                                                            </div>
+                                                            <div class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+                                                                 tabindex="0" role="button" aria-disabled="false"
+                                                                 bis_skin_checked="1">Alphabetical
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jss7" bis_skin_checked="1">
+                        <div class="MuiBox-root jss174" bis_skin_checked="1">
+                            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2" bis_skin_checked="1">
+                                <t t-foreach="products" t-as="product">
+                                    <a t-att-href="product.website_url" contenteditable="false">
+                                        <div class="MuiBox-root jss221">
+                                            <img class="MuiSkeleton-root MuiSkeleton-rect  h-100 w-100"
+                                                 style="height: 100% " t-if="product.image_1920"
+                                                 t-att-src="'data:image/jpeg;base64,' + product.image_1920.decode('utf-8')"
+                                                 alt="Product Image"/>
+                                        </div>
+                                        <label>
+                                            <t t-esc="product.name"/>
+                                        </label>
+                                        <label>
+                                            <t t-esc="product.list_price"/>
+                                        </label>
+                                    </a>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </t>
+
+    </template>
+</odoo>

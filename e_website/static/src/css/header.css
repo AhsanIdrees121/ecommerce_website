@@ -1,0 +1,164 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set mobile-responsive font size */
+html {
+    font-size: 16px;
+}
+
+/* Set breakpoints for mobile responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust header styles for mobile */
+    .main-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .logo-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .main-nav {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-item {
+        margin-bottom: 5px;
+    }
+    .nav-link {
+        padding: 5px 10px;
+    }
+    .search-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .signup-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .mini-basket {
+        width: 100%;
+    }
+}
+
+/* Common styles for all screen sizes */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.logo-container {
+    flex: 0 0 100px;
+}
+
+.logo-link {
+    display: block;
+    height: 16px; /* Adjust the height of your logo */
+}
+
+.main-nav {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 8px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.search-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.account-actions {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+}
+
+.signup-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.login-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basket-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.basket-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    /* Add your basket icon image here */
+    background-color: #007bff;
+    /* Add your basket icon image or styles here */
+}
+
+.mini-basket-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.mini-basket:hover .mini-basket-content {
+    display: block;
+}

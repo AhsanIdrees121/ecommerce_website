@@ -1,0 +1,408 @@
+<odoo>
+    <data>
+        <!-- Create the "Main" categories -->
+        <record model="product.public.category" id="living_room_category">
+            <field name="name">Living Room</field>
+            <field name="parent_id" eval="False"/>
+        </record>
+        <record model="product.public.category" id="bed_room_category">
+            <field name="name">Bed Room</field>
+            <field name="parent_id" eval="False"/>
+        </record>
+        <record model="product.public.category" id="dining_room_category">
+            <field name="name">Dining Room</field>
+            <field name="parent_id" eval="False"/>
+        </record>
+        <record model="product.public.category" id="home_office_category">
+            <field name="name">Home Office</field>
+            <field name="parent_id" eval="False"/>
+        </record>
+        <record model="product.public.category" id="furnishing_category">
+            <field name="name">Furnishing</field>
+            <field name="parent_id" eval="False"/>
+        </record>
+
+        <!-- Creating sub-category under "Living Room" -->
+        <record model="product.public.category" id="sofas_category">
+            <field name="name">Sofas</field>
+            <field name="parent_id" ref="living_room_category"/>
+        </record>
+        <record model="product.public.category" id="recliners_category">
+            <field name="name">Recliners</field>
+            <field name="parent_id" ref="living_room_category"/>
+        </record>
+        <record model="product.public.category" id="shoe_racks_category">
+            <field name="name">Shoe Racks</field>
+            <field name="parent_id" ref="living_room_category"/>
+        </record>
+        <record model="product.public.category" id="ottoman_category">
+            <field name="name">Ottoman</field>
+            <field name="parent_id" ref="living_room_category"/>
+        </record>
+        <record model="product.public.category" id="wall_shelves_category">
+            <field name="name">Wall Shelves</field>
+            <field name="parent_id" ref="living_room_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Bed Room" -->
+        <record model="product.public.category" id="bed_category">
+            <field name="name">Beds</field>
+            <field name="parent_id" ref="bed_room_category"/>
+        </record>
+        <record model="product.public.category" id="bed_side_table_category">
+            <field name="name">Bed Side Tables</field>
+            <field name="parent_id" ref="bed_room_category"/>
+        </record>
+        <record model="product.public.category" id="mattresses_category">
+            <field name="name">Mattresses</field>
+            <field name="parent_id" ref="bed_room_category"/>
+        </record>
+        <record model="product.public.category" id="dressing_tables_category">
+            <field name="name">Dressing Tables</field>
+            <field name="parent_id" ref="bed_room_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Dining Room" -->
+        <record model="product.public.category" id="dining_table_sets_category">
+            <field name="name">Dining Table Sets</field>
+            <field name="parent_id" ref="dining_room_category"/>
+        </record>
+        <record model="product.public.category" id="sideboards_hutch_category">
+            <field name="name">Sideboards and Hutch</field>
+            <field name="parent_id" ref="dining_room_category"/>
+        </record>
+        <record model="product.public.category" id="dining_tables_category">
+            <field name="name">Dining Tables</field>
+            <field name="parent_id" ref="dining_room_category"/>
+        </record>
+        <record model="product.public.category" id="space_savers_category">
+            <field name="name">Space Savers</field>
+            <field name="parent_id" ref="dining_room_category"/>
+        </record>
+        <record model="product.public.category" id="bar_category">
+            <field name="name">Bar</field>
+            <field name="parent_id" ref="dining_room_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Home Office" -->
+        <record model="product.public.category" id="home_office_tables_category">
+            <field name="name">Home Office Tables</field>
+            <field name="parent_id" ref="home_office_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_chairs_category">
+            <field name="name">Home Office chairs</field>
+            <field name="parent_id" ref="home_office_category"/>
+        </record>
+        <record model="product.public.category" id="book_case_cabinets_category">
+            <field name="name">Book Case and Cabinets</field>
+            <field name="parent_id" ref="home_office_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Furnishing" -->
+        <record model="product.public.category" id="accessories_category">
+            <field name="name">Accessories</field>
+            <field name="parent_id" ref="furnishing_category"/>
+        </record>
+        <record model="product.public.category" id="appliance_covers_category">
+            <field name="name">Appliance Covers</field>
+            <field name="parent_id" ref="furnishing_category"/>
+        </record>
+        <record model="product.public.category" id="floor_coverings_category">
+            <field name="name">Floor Covering</field>
+            <field name="parent_id" ref="furnishing_category"/>
+        </record>
+        <record model="product.public.category" id="curtains_category">
+            <field name="name">Curtains</field>
+            <field name="parent_id" ref="furnishing_category"/>
+        </record>
+
+        <!-- Create the "3 Seater Sofas" sub-category under "Sofas" -->
+        <record model="product.public.category" id="sofas_sets_category">
+            <field name="name">Sofa Sets</field>
+            <field name="parent_id" ref="sofas_category"/>
+        </record>
+        <record model="product.public.category" id="3_seater_sofas_category">
+            <field name="name">3 Seater Sofas</field>
+            <field name="parent_id" ref="sofas_category"/>
+        </record>
+        <record model="product.public.category" id="2_seater_sofas_category">
+            <field name="name">2 Seater Sofas</field>
+            <field name="parent_id" ref="sofas_category"/>
+        </record>
+        <record model="product.public.category" id="1_seater_sofas_category">
+            <field name="name">1 Seater Sofas</field>
+            <field name="parent_id" ref="sofas_category"/>
+        </record>
+        <record model="product.public.category" id="sectional_sofas_category">
+            <field name="name">Sectional Sofas</field>
+            <field name="parent_id" ref="sofas_category"/>
+        </record>
+        <record model="product.public.category" id="sofa_cum_beds_category">
+            <field name="name">Sofa Cum Beds</field>
+            <field name="parent_id" ref="sofas_category"/>
+        </record>
+        <!-- Create the "3 Seater Sofas" sub-category under "Recliners" -->
+        <record model="product.public.category" id="recliners_sets_category">
+            <field name="name">Recliner Sets</field>
+            <field name="parent_id" ref="recliners_category"/>
+        </record>
+        <record model="product.public.category" id="3_seater_recliners_category">
+            <field name="name">3 Seater Recliners</field>
+            <field name="parent_id" ref="recliners_category"/>
+        </record>
+        <record model="product.public.category" id="2_seater_recliners_category">
+            <field name="name">2 Seater Recliners</field>
+            <field name="parent_id" ref="recliners_category"/>
+        </record>
+        <record model="product.public.category" id="1_seater_recliners_category">
+            <field name="name">1 Seater Recliners</field>
+            <field name="parent_id" ref="recliners_category"/>
+        </record>
+
+        <!-- Create the "3 Seater Sofas" sub-category under "Shoe Racks" -->
+        <record model="product.public.category" id="shoe_cabinets_category">
+            <field name="name">Shoe Cabinets</field>
+            <field name="parent_id" ref="shoe_racks_category"/>
+        </record>
+        <record model="product.public.category" id="shoe_open_shelves_category">
+            <field name="name">Shoe Open Shelves</field>
+            <field name="parent_id" ref="shoe_racks_category"/>
+        </record>
+        <record model="product.public.category" id="shoe_cabinets_with_seatings_category">
+            <field name="name">Shoe Cabinets with Seating</field>
+            <field name="parent_id" ref="shoe_racks_category"/>
+        </record>
+        <record model="product.public.category" id="diy_fabric_shaoeracks_category">
+            <field name="name">DIY Fabric Shoeracks</field>
+            <field name="parent_id" ref="shoe_racks_category"/>
+        </record>
+        <!-- Create the "3 Seater Sofas" sub-category under "Ottoman" -->
+        <record model="product.public.category" id="ottomans_category">
+            <field name="name">Ottomans</field>
+            <field name="parent_id" ref="ottoman_category"/>
+        </record>
+        <record model="product.public.category" id="ottomans_wit_storage_category">
+            <field name="name">Ottomans with Storage</field>
+            <field name="parent_id" ref="ottoman_category"/>
+        </record>
+        <!-- Create the "3 Seater Sofas" sub-category under "Wall Shelves" -->
+        <record model="product.public.category" id="decor_shelves_category">
+            <field name="name">Decor Shelves</field>
+            <field name="parent_id" ref="wall_shelves_category"/>
+        </record>
+        <record model="product.public.category" id="utility_shelves_category">
+            <field name="name">Utility Shelves</field>
+            <field name="parent_id" ref="wall_shelves_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Beds" -->
+        <record model="product.public.category" id="king_beds_category">
+            <field name="name">King Beds</field>
+            <field name="parent_id" ref="bed_category"/>
+        </record>
+        <record model="product.public.category" id="queen_beds_category">
+            <field name="name">Queen Beds</field>
+            <field name="parent_id" ref="bed_category"/>
+        </record>
+        <record model="product.public.category" id="single_beds_category">
+            <field name="name">Single Beds</field>
+            <field name="parent_id" ref="bed_category"/>
+        </record>
+        <record model="product.public.category" id="teen_beds_category">
+            <field name="name">Teen Beds</field>
+            <field name="parent_id" ref="bed_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Bed Side Tables" -->
+        <record model="product.public.category" id="bed_side_tables_category">
+            <field name="name">Bed Side Tables</field>
+            <field name="parent_id" ref="bed_side_table_category"/>
+        </record>
+        <record model="product.public.category" id="bed_side_tables_with_drawer_category">
+            <field name="name">Bed Side Tables with drawer</field>
+            <field name="parent_id" ref="bed_side_table_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Mattresses" -->
+        <record model="product.public.category" id="king_mattresses_category">
+            <field name="name">King Mattresses</field>
+            <field name="parent_id" ref="mattresses_category"/>
+        </record>
+        <record model="product.public.category" id="queen_mattresses_category">
+            <field name="name">Queen Mattresses</field>
+            <field name="parent_id" ref="mattresses_category"/>
+        </record>
+        <record model="product.public.category" id="single_mattresses_category">
+            <field name="name">Single Mattresses</field>
+            <field name="parent_id" ref="mattresses_category"/>
+        </record>
+        <record model="product.public.category" id="teen_mattresses_category">
+            <field name="name">Teen Mattresses</field>
+            <field name="parent_id" ref="mattresses_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Dressing Tables" -->
+        <record model="product.public.category" id="dresser_mirror_units_category">
+            <field name="name">Dresser Mirror Units</field>
+            <field name="parent_id" ref="dressing_tables_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Dining Table Set" -->
+        <record model="product.public.category" id="dining_table_sets_category_1">
+            <field name="name">2 Seater Dining Table Sets</field>
+            <field name="parent_id" ref="dining_table_sets_category"/>
+        </record>
+        <record model="product.public.category" id="dining_table_sets_category_2">
+            <field name="name">4 Seater Dining Table Sets</field>
+            <field name="parent_id" ref="dining_table_sets_category"/>
+        </record>
+        <record model="product.public.category" id="dining_table_sets_category_3">
+            <field name="name">6 Seater Dining Table Sets</field>
+            <field name="parent_id" ref="dining_table_sets_category"/>
+        </record>
+        <record model="product.public.category" id="dining_table_sets_category_3">
+            <field name="name">8 Seater Dining Table Sets</field>
+            <field name="parent_id" ref="dining_table_sets_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Sideboards and Hutch" -->
+        <record model="product.public.category" id="sideboards_hutch_category_1">
+            <field name="name">Crockery Units</field>
+            <field name="parent_id" ref="sideboards_hutch_category"/>
+        </record>
+        <record model="product.public.category" id="sideboards_hutch_category_2">
+            <field name="name">Hutch Units</field>
+            <field name="parent_id" ref="sideboards_hutch_category"/>
+        </record>
+        <record model="product.public.category" id="sideboards_hutch_category_3">
+            <field name="name">Sideboards</field>
+            <field name="parent_id" ref="sideboards_hutch_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Dining Tables" -->
+        <record model="product.public.category" id="dining_tables_category_1">
+            <field name="name">2 Seater Tables</field>
+            <field name="parent_id" ref="dining_tables_category"/>
+        </record>
+        <record model="product.public.category" id="dining_tables_category_2">
+            <field name="name">4 Seater Tables</field>
+            <field name="parent_id" ref="dining_tables_category"/>
+        </record>
+        <record model="product.public.category" id="dining_tables_category_3">
+            <field name="name">6 Seater Tables</field>
+            <field name="parent_id" ref="dining_tables_category"/>
+        </record>
+        <record model="product.public.category" id="dining_tables_category_4">
+            <field name="name">8 Seater Tables</field>
+            <field name="parent_id" ref="dining_tables_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Space Savers" -->
+        <record model="product.public.category" id="space_savers_category_1">
+            <field name="name">Dining Table Sets</field>
+            <field name="parent_id" ref="space_savers_category"/>
+        </record>
+        <record model="product.public.category" id="space_savers_category_2">
+            <field name="name">Dining Tables</field>
+            <field name="parent_id" ref="space_savers_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Bar" -->
+        <record model="product.public.category" id="bar_category_1">
+            <field name="name">Bar Cabinet-Curios</field>
+            <field name="parent_id" ref="bar_category"/>
+        </record>
+        <record model="product.public.category" id="bar_category_2">
+            <field name="name">Bar Stores</field>
+            <field name="parent_id" ref="bar_category"/>
+        </record>
+        <record model="product.public.category" id="bar_category_3">
+            <field name="name">Serving Trolley</field>
+            <field name="parent_id" ref="bar_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Home Office Tables" -->
+        <record model="product.public.category" id="home_office_tables_category_1">
+            <field name="name">Computer Table</field>
+            <field name="parent_id" ref="home_office_tables_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_tables_category_2">
+            <field name="name">Work Tables</field>
+            <field name="parent_id" ref="home_office_tables_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_tables_category_3">
+            <field name="name">Table with storage</field>
+            <field name="parent_id" ref="home_office_tables_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_tables_category_4">
+            <field name="name">Functional Tables</field>
+            <field name="parent_id" ref="home_office_tables_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_tables_category_5">
+            <field name="name">Kids Tables</field>
+            <field name="parent_id" ref="home_office_tables_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Home Office Chairs" -->
+        <record model="product.public.category" id="home_office_chairs_category_1">
+            <field name="name">Low Back Office Chairs</field>
+            <field name="parent_id" ref="home_office_chairs_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_chairs_category_2">
+            <field name="name">Medium Back Office Chairs</field>
+            <field name="parent_id" ref="home_office_chairs_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_chairs_category_3">
+            <field name="name">High Back Office Chairs</field>
+            <field name="parent_id" ref="home_office_chairs_category"/>
+        </record>
+        <record model="product.public.category" id="home_office_chairs_category_4">
+            <field name="name">Kids Chairs</field>
+            <field name="parent_id" ref="home_office_chairs_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Book Case and Cabinets" -->
+        <record model="product.public.category" id="book_case_cabinets_category_1">
+            <field name="name">Open Books and Shelves</field>
+            <field name="parent_id" ref="book_case_cabinets_category"/>
+        </record>
+        <record model="product.public.category" id="book_cabinets_category_2">
+            <field name="name">Book Cabinets</field>
+            <field name="parent_id" ref="book_case_cabinets_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Appliance Covers" -->
+        <record model="product.public.category" id="appliance_covers_category_1">
+            <field name="name">Appliance Covers and Mats</field>
+            <field name="parent_id" ref="appliance_covers_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Floor Covering" -->
+        <record model="product.public.category" id="floor_coverings_category_1">
+            <field name="name">Doormats</field>
+            <field name="parent_id" ref="floor_coverings_category"/>
+        </record>
+        <record model="product.public.category" id="floor_coverings_category_2">
+            <field name="name">Carpets</field>
+            <field name="parent_id" ref="floor_coverings_category"/>
+        </record>
+        <record model="product.public.category" id="floor_coverings_category_3">
+            <field name="name">Rugs</field>
+            <field name="parent_id" ref="floor_coverings_category"/>
+        </record>
+        <record model="product.public.category" id="floor_coverings_category_4">
+            <field name="name">Dhurries</field>
+            <field name="parent_id" ref="floor_coverings_category"/>
+        </record>
+
+        <!-- Creating sub-category under "Curtains" -->
+        <record model="product.public.category" id="curtains_category_1">
+            <field name="name">Door Curtains</field>
+            <field name="parent_id" ref="curtains_category"/>
+        </record>
+        <record model="product.public.category" id="curtains_category_2">
+            <field name="name">Window Curtains</field>
+            <field name="parent_id" ref="curtains_category"/>
+        </record>
+    </data>
+</odoo>

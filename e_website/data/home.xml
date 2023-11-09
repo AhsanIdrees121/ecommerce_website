@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="home">
+        <t t-call="website.layout">
+            <head>
+                <!-- Include Slick carousel library -->
+                <!-- Include jQuery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                <link rel="stylesheet" type="text/css"
+                      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+                <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+                <link rel="preload"
+                      href="/e_website/static/src/js/home.js"
+                      as="script"/>
+                <style>
+                    /* Styling for the slider container */
+                    #hero_banner_wrapper {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    }
+
+                    /* Styling for the slides */
+                    .slick-slide {
+                    width: 1232px;
+                    display: inline-block;
+                    outline: none;
+                    }
+
+                    /* Styling for the navigation arrows */
+                    .slick-arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 40px;
+                    height: 40px;
+                    background-color: #ccc;
+                    /* Add custom arrow styles here */
+                    }
+
+                    /* Styling for the previous arrow */
+                    .slick-prev {
+                    left: -24px;
+                    }
+
+                    /* Styling for the next arrow */
+                    .slick-next {
+                    right: -24px;
+                    }
+
+                    /* Mobile Responsive Styles */
+                    @media screen and (max-width: 768px) {
+                    .slick-slide {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    }
+
+                    .slick-arrow {
+                    display: block;
+                    }
+
+                    /* Adjust arrow position for mobile */
+                    .slick-prev {
+                    left: 10px;
+                    }
+
+                    .slick-next {
+                    right: 10px;
+                    }
+                    }
+
+                </style>
+            </head>
+            <t t-call="e_website.replace_header">
+                <t t-set="departments" t-value="all_departments"/>
+            </t>
+            <div id="__next">
+                <div class="MuiBox-root jss100 main-country-in main-language-en main-page-home desktop-home" dir="ltr"
+                     id="main-part">
+                    <div>
+                        <div class="jss101">
+                            <!--                            header-->
+                            <div bis_skin_checked="1">
+<!--                                SLIDER COMING SOON-->
+                                <t t-call="e_website.slider"/>
+                            </div>
+
+                            <!--                            after header-->
+                            <div>
+                                <div>
+                                    <div class="MuiBox-root jss126">
+                                        <div class="jss7">
+                                            <div class="MuiGrid-root MuiGrid-container">
+                                                <div class="jss122" id="modular_block_wrapper">
+                                                    <div class="lazyload-wrapper">
+                                                        <div class="jss7">
+                                                            <div class="MuiBox-root jss129">
+                                                                <img class="MuiCardMedia-root jss454 MuiCardMedia-media MuiCardMedia-img"
+                                                                     src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/HC-Uber-HP-Desktop-PromoStrip3-21Jul23.jpg"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div>
+                                <div>
+                                    <div class="jss202 trendingCarousel"
+                                         id="block-homecentrein-HomePage-uberhome-desktop-v2-OurBenefits">
+                                        <div class="jss7" style="height: 50px;">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss214">
+                                                            <div class="MuiBox-root jss215">
+                                                                <img class="jss2133"
+                                                                     src="https://lmsin.net/cdn-cgi/image/w=410,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/LS-DesktopUberHP-OurBenefit1-30Jun2023.jpg"
+                                                                     width="100%"/>
+                                                            </div>
+                                                            <div class="MuiBox-root jss216">
+                                                                <img class="jss2133"
+                                                                     src="https://lmsin.net/cdn-cgi/image/w=410,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/LS-DesktopUberHP-OurBenefit1-30Jun2023.jpg"
+                                                                     width="100%"/>
+                                                            </div>
+                                                            <div class="MuiBox-root jss217">
+                                                                <img class="jss2133"
+                                                                     src="https://lmsin.net/cdn-cgi/image/w=410,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/LS-DesktopUberHP-OurBenefit1-30Jun2023.jpg"
+                                                                     width="100%"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="jss7">
+                                        <div class="MuiGrid-root jss139 MuiGrid-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidget2"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Hot Deals
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss220">
+                                                    <t t-foreach="hot_products" t-as="product">
+                                                        <a t-att-href="product.website_url" contenteditable="false">
+                                                            <div class="MuiBox-root jss221">
+                                                                <img class="MuiSkeleton-root MuiSkeleton-rect  h-100 w-100"
+                                                                     style="height: 100% " t-if="product.image_1920"
+                                                                     t-att-src="'data:image/jpeg;base64,' + product.image_1920.decode('utf-8')"
+                                                                     alt="Product Image"/>
+                                                            </div>
+                                                        </a>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="MuiBox-root jss135">
+                                        <div class="jss7">
+                                            <div class="MuiGrid-root MuiGrid-container">
+                                                <div class="jss122" id="modular_block_wrapper">
+                                                    <div class="lazyload-wrapper">
+                                                        <div class="jss7">
+                                                            <div class="MuiBox-root jss138">
+                                                                <img class="MuiCardMedia-root jss2112 MuiCardMedia-media MuiCardMedia-img"
+                                                                     src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/Home-Centre/Test-UI/HC-Uber-HP-Desktop-PromoStrip2-21Jul23.jpg"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-LivingRunner"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Get The Look
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss237">
+                                                            <div class="MuiBox-root jss238">
+                                                                <!--                                                                <img class="MuiSkeleton-root MuiSkeleton-rect h-100 w-100"-->
+                                                                <img class="MuiSkeleton-root MuiSkeleton-rect  h-100 w-100"
+                                                                     style="height: 100% "
+                                                                     t-if="look_product.image_1920"
+                                                                     t-att-src="'data:image/jpeg;base64,' + look_product.image_1920.decode('utf-8')"
+                                                                     alt="Product Image"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="jss202 trendingCarousel"
+                                         id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetA">
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss240">
+                                                    <t t-foreach="look_products" t-as="product">
+                                                        <a t-att-href="product.website_url" contenteditable="false">
+                                                            <div class="MuiBox-root jss241">
+                                                                <img class="MuiSkeleton-root MuiSkeleton-rect  h-100 w-100"
+                                                                     style="height: 100% " t-if="product.image_1920"
+                                                                     t-att-src="'data:image/jpeg;base64,' + product.image_1920.decode('utf-8')"
+                                                                     alt="Product Image"/>
+                                                            </div>
+                                                        </a>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetB"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Exclusive on Homecentre.com
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss247">
+                                                    <div class="MuiBox-root jss248">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss249">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss250">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss251">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-DININGRUNNER"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    #FashionEdit
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss255">
+                                                            <div class="MuiBox-root jss256">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetD"
+                                    >
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss258">
+                                                    <div class="MuiBox-root jss259">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss260">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss261">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss262">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-DECORINTREND"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Work Of Art
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss266">
+                                                            <div class="MuiBox-root jss267">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetC"
+                                    >
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss269">
+                                                    <div class="MuiBox-root jss270">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss271">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss272">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss273">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetE"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Perfect Gifts for the Occassion
+                                                    <span
+                                                            class="jss207"
+                                                    ></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss276">
+                                                    <div class="MuiBox-root jss277">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss278">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss279">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss280">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="MuiBox-root jss281">
+                                        <div class="jss7">
+                                            <div class="MuiGrid-root MuiGrid-container">
+                                                <div class="jss122" id="modular_block_wrapper">
+                                                    <div class="lazyload-wrapper">
+                                                        <div class="jss7">
+                                                            <div class="MuiBox-root jss284">
+                                                                <div class="MuiBox-root jss285">
+                                                                    <span
+                                                                            class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                            style="height: 100%"
+                                                                    ></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetF"
+                                    >
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss287">
+                                                    <div class="MuiBox-root jss288">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss289">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss290">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss291">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-TOPTRENDINGBRANDSRunner"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Top Selling Brand
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss295">
+                                                            <div class="MuiBox-root jss296">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-BedroomRunner"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Livingroom
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss300">
+                                                            <div class="MuiBox-root jss301">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetG"
+                                    >
+                                        <div class="jss211"></div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss303">
+                                                    <div class="MuiBox-root jss304">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss305">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss306">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss307">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-REFURBISHED"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Easy Buys
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss310">
+                                                    <div class="MuiBox-root jss311">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss312">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-BEDANDBATH"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Diningroom
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss316">
+                                                            <div class="MuiBox-root jss317">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetH"
+                                    >
+                                        <div class="jss211"></div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss319">
+                                                    <div class="MuiBox-root jss320">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss321">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss322">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss323">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-SHOPANDEARNREWARDS"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Shop And Earn Rewards
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss327">
+                                                            <div class="MuiBox-root jss328">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                            <div class="MuiBox-root jss329">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                            <div class="MuiBox-root jss330">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                            <div class="MuiBox-root jss331">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-QuiltCarnival"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Bedroom
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="jss210">
+                                                <div class="lazyload-wrapper">
+                                                    <div class="jss7">
+                                                        <div class="MuiBox-root jss335">
+                                                            <div class="MuiBox-root jss336">
+                                                                <span
+                                                                        class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                        style="height: 100%"
+                                                                ></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-PromoWidgetI"
+                                    >
+                                        <div class="jss211"></div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss338">
+                                                    <div class="MuiBox-root jss339">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss340">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss341">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss342">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-TOPBRANDS"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Best in Brands
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss345">
+                                                    <div class="MuiBox-root jss346">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss347">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss348">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss349">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss350">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss351">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div
+                                            class="jss202 trendingCarousel"
+                                            id="block-homecentrein-HomePage-uberhome-desktop-v2-REF120523A"
+                                    >
+                                        <div class="jss7">
+                                            <div class="jss205">
+                                                <h2 class="MuiTypography-root jss206 MuiTypography-h5">
+                                                    Blog
+                                                    <span class="jss207"></span>
+                                                </h2>
+                                                <a href="/in/en" class="jss209"></a>
+                                            </div>
+                                        </div>
+                                        <div class="jss7">
+                                            <div class="lazyload-wrapper">
+                                                <div class="MuiBox-root jss354">
+                                                    <div class="MuiBox-root jss355">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                    <div class="MuiBox-root jss356">
+                                                        <span
+                                                                class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                style="height: 100%"
+                                                        ></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="jss357">
+                                        <div class="jss7">
+                                            <div class="jss358">
+                                                <div>Top Departments</div>
+                                                <span class="jss364"></span>
+                                            </div>
+                                            <div class="jss359">
+                                                <div class="jss360">
+                                                    <div class="jss361">
+                                                        <div class="jss362 jss363">Living Room</div>
+                                                    </div>
+                                                    <div class="jss361">
+                                                        <div class="jss362">Décor</div>
+                                                    </div>
+                                                    <div class="jss361">
+                                                        <div class="jss362">Furnishing</div>
+                                                    </div>
+                                                    <div class="jss361">
+                                                        <div class="jss362">Kitchen</div>
+                                                    </div>
+                                                    <div class="jss361">
+                                                        <div class="jss362"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="jss365">
+                                                    <div id="trendingCarousel">
+                                                        <div
+                                                                class="jss203"
+                                                                id="block-homecentrein-HomePage-uberhome-desktop-v2-CategoriesCallout"
+                                                        >
+                                                            <div class="jss7">
+                                                                <div class="jss205">
+                                                                    <h2
+                                                                            class="MuiTypography-root jss208 MuiTypography-h5"
+                                                                    >
+                                                                        Living Room
+                                                                        <span class="jss207"></span>
+                                                                    </h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="jss7">
+                                                                <div class="lazyload-wrapper">
+                                                                    <div class="MuiBox-root jss369">
+                                                                        <div class="MuiBox-root jss370">
+                                                                            <span
+                                                                                    class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                                    style="height: 100%"
+                                                                            ></span>
+                                                                        </div>
+                                                                        <div class="MuiBox-root jss371">
+                                                                            <span
+                                                                                    class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                                    style="height: 100%"
+                                                                            ></span>
+                                                                        </div>
+                                                                        <div class="MuiBox-root jss372">
+                                                                            <span
+                                                                                    class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                                    style="height: 100%"
+                                                                            ></span>
+                                                                        </div>
+                                                                        <div class="MuiBox-root jss373">
+                                                                            <span
+                                                                                    class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                                    style="height: 100%"
+                                                                            ></span>
+                                                                        </div>
+                                                                        <div class="MuiBox-root jss374">
+                                                                            <span
+                                                                                    class="MuiSkeleton-root MuiSkeleton-rect "
+                                                                                    style="height: 100%"
+                                                                            ></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="jss7">
+                                        <div class="MuiGrid-root jss139 MuiGrid-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="jss7">
+                                        <div class="MuiGrid-root jss139 MuiGrid-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+
+    </template>
+</odoo>
